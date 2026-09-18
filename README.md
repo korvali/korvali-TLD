@@ -6,7 +6,7 @@
 
 ## 🔗 Official Network
 
-- **Official Website**: [korvali.net](https://korvali.net)
+- **Official Website**: [Korvali](https://www.korvali.net)
 - **Live Demo Engine**: [tld.korvali.net](https://tld.korvali.net)
 ---
 
