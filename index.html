@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
-    <title>Korvali TLD — Suffix-Based Domain Lookup Engine</title>
+    <title>Korvali TLD &ndash; Suffix-Based Domain Lookup Engine</title>
     
     <!-- Primary Meta Tags --> 
-    <meta name="title" content="Korvali TLD — Suffix-Based Domain Lookup Engine" />
+    <meta name="title" content="Korvali TLD &ndash; Suffix-Based Domain Lookup Engine" />
     <meta name="description" content="Explore and filter top-level domains (TLDs) and country-code second-level domains (ccSLDs) by ending suffix. Powered by Korvali Infrastructure." />
     <meta name="keywords" content="Korvali TLD, domain hacks, TLD suffix, ccSLD list, domain lookup, TLD finder, extension directory" />
     <meta name="robots" content="index, follow" />
@@ -17,7 +17,7 @@
     <!-- Open Graph / Link Preview -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tld.korvali.net/" />
-    <meta property="og:title" content="Korvali TLD — Suffix-Based Domain Lookup Engine" />
+    <meta property="og:title" content="Korvali TLD &ndash; Suffix-Based Domain Lookup Engine" />
     <meta property="og:description" content="Explore and filter TLDs and ccSLDs by ending suffix. Fast static lookup for developers and domain hack builders." />
     <meta property="og:image" content="https://korvali.net/img/korvali.jpg" />
     <meta property="og:site_name" content="Korvali TLD" />
@@ -25,7 +25,7 @@
     <!-- Twitter Card -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://tld.korvali.net/" />
-    <meta property="twitter:title" content="Korvali TLD — Suffix-Based Domain Lookup Engine" />
+    <meta property="twitter:title" content="Korvali TLD &ndash; Suffix-Based Domain Lookup Engine" />
     <meta property="twitter:description" content="Explore and filter TLDs and ccSLDs by ending suffix. Fast static lookup for developers and domain hack builders." />
     <meta property="twitter:image" content="https://korvali.net/img/korvali.jpg" />
 
@@ -101,6 +101,28 @@
             transform: translateY(-2px);
             color: #ffffff;
         }
+
+        /* Styling Tombol GitHub Open Source */
+        .github-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #e2e8f0;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .github-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.3);
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
@@ -117,7 +139,14 @@
                 <div class="header-title">
                     <strong>Korvali TLD</strong> &#x00B7; Index Directory
                 </div>
-                <span class="header-version">v2026.1.18</span>
+                
+                <!-- Tombol GitHub Open Source di Header Terminal -->
+                <a href="https://github.com/korvali/korvali-TLD" target="_blank" rel="noopener noreferrer" class="github-btn">
+                    <svg height="14" width="14" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                    </svg>
+                    Open Source
+                </a>
             </div>
 
             <div class="info-modal-body" style="background: rgba(2, 4, 10, 0.3);">
@@ -133,7 +162,7 @@
 
                     <!-- Alphabetical Index A-Z -->
                     <div style="margin-top: 10px;">
-                        <span style="font-size: 12px; opacity: 0.6; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px;">🔤 Browse by Alphabet Suffix</span>
+                        <span style="font-size: 12px; opacity: 0.6; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px;"> Browse by Alphabet Suffix</span>
                         <div class="alphabet-grid">
                             <a href="/a" class="alpha-card">A</a>
                             <a href="/b" class="alpha-card">B</a>
@@ -192,8 +221,10 @@
 
                     <hr class="divider" style="margin-top: 20px;" />
 
-                    <div style="text-align: center;">
+                    <div style="text-align: center; display: flex; justify-content: center; align-items: center; gap: 12px;">
                         <a href="https://korvali.net" class="line text-cyan url-highlight" style="font-size: 13px;">&#x2190; Powered by Korvali Infrastructure</a>
+                        <span style="opacity: 0.3;">&#183;</span>
+                        <a href="https://github.com/korvali/korvali-TLD" target="_blank" rel="noopener noreferrer" style="font-size: 12px; color: rgba(255, 255, 255, 0.6); text-decoration: none;">GitHub Repository &#x2197;</a>
                     </div>
 
                 </div>
