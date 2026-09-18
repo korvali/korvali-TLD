@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tld.korvali.net/sitemap.xml

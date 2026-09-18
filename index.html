@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <title>Korvali TLD — Suffix-Based Domain Lookup Engine</title>
+    
+    <!-- Primary Meta Tags --> 
+    <meta name="title" content="Korvali TLD — Suffix-Based Domain Lookup Engine" />
+    <meta name="description" content="Explore and filter top-level domains (TLDs) and country-code second-level domains (ccSLDs) by ending suffix. Powered by Korvali Infrastructure." />
+    <meta name="keywords" content="Korvali TLD, domain hacks, TLD suffix, ccSLD list, domain lookup, TLD finder, extension directory" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tld.korvali.net/" />
+
+    <!-- Open Graph / Link Preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tld.korvali.net/" />
+    <meta property="og:title" content="Korvali TLD — Suffix-Based Domain Lookup Engine" />
+    <meta property="og:description" content="Explore and filter TLDs and ccSLDs by ending suffix. Fast static lookup for developers and domain hack builders." />
+    <meta property="og:image" content="https://korvali.net/img/korvali.jpg" />
+    <meta property="og:site_name" content="Korvali TLD" />
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://tld.korvali.net/" />
+    <meta property="twitter:title" content="Korvali TLD — Suffix-Based Domain Lookup Engine" />
+    <meta property="twitter:description" content="Explore and filter TLDs and ccSLDs by ending suffix. Fast static lookup for developers and domain hack builders." />
+    <meta property="twitter:image" content="https://korvali.net/img/korvali.jpg" />
+
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/png" sizes="128x128" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="application-name" content="Korvali TLD" />
+    <meta name="apple-mobile-web-app-title" content="Korvali TLD" />
+
+    <!-- Structured Data (JSON-LD SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Korvali TLD",
+      "url": "https://tld.korvali.net/",
+      "description": "Fast static TLD and ccSLD suffix lookup engine for developers and domain hackers.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Korvali Infrastructure",
+        "url": "https://korvali.net"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://korvali.net/playground.css" />
+
+    <style>
+        html, body {
+            height: auto !important;
+            min-height: 100vh !important;
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+        }
+
+        body {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: flex-start !important;
+            padding: 16px 8px 40px 8px !important;
+        }
+
+        .tld-page-wrapper {
+            width: 100%;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .alphabet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .alpha-card {
+            background: rgba(2, 4, 10, 0.6);
+            border: 1px solid rgba(34, 211, 238, 0.2);
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #22d3ee;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .alpha-card:hover {
+            border-color: #22d3ee;
+            background: rgba(34, 211, 238, 0.15);
+            transform: translateY(-2px);
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tld-page-wrapper">
+        <div class="terminal-wrapper" style="max-height: none; margin-bottom: 0;">
+
+            <div class="terminal-header">
+                <div class="header-dots">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-green"></span>
+                </div>
+                <div class="header-title">
+                    <strong>Korvali TLD</strong> &#x00B7; Index Directory
+                </div>
+                <span class="header-version">v2026.1.18</span>
+            </div>
+
+            <div class="info-modal-body" style="background: rgba(2, 4, 10, 0.3);">
+                <div class="modal-section">
+                    <h1 class="page-title">
+                        Static TLD &amp; ccSLD <span class="highlight">Directory</span>
+                    </h1>
+                    <div class="page-subtitle">
+                        Fast, lightweight domain lookup engine filtered by ending suffix.
+                    </div>
+
+                    <hr class="divider" style="margin-top: 20px;" />
+
+                    <!-- Alphabetical Index A-Z -->
+                    <div style="margin-top: 10px;">
+                        <span style="font-size: 12px; opacity: 0.6; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px;">🔤 Browse by Alphabet Suffix</span>
+                        <div class="alphabet-grid">
+                            <a href="/a" class="alpha-card">A</a>
+                            <a href="/b" class="alpha-card">B</a>
+                            <a href="/c" class="alpha-card">C</a>
+                            <a href="/d" class="alpha-card">D</a>
+                            <a href="/e" class="alpha-card">E</a>
+                            <a href="/f" class="alpha-card">F</a>
+                            <a href="/g" class="alpha-card">G</a>
+                            <a href="/h" class="alpha-card">H</a>
+                            <a href="/i" class="alpha-card">I</a>
+                            <a href="/j" class="alpha-card">J</a>
+                            <a href="/k" class="alpha-card">K</a>
+                            <a href="/l" class="alpha-card">L</a>
+                            <a href="/m" class="alpha-card">M</a>
+                            <a href="/n" class="alpha-card">N</a>
+                            <a href="/o" class="alpha-card">O</a>
+                            <a href="/p" class="alpha-card">P</a>
+                            <a href="/q" class="alpha-card">Q</a>
+                            <a href="/r" class="alpha-card">R</a>
+                            <a href="/s" class="alpha-card">S</a>
+                            <a href="/t" class="alpha-card">T</a>
+                            <a href="/u" class="alpha-card">U</a>
+                            <a href="/v" class="alpha-card">V</a>
+                            <a href="/w" class="alpha-card">W</a>
+                            <a href="/x" class="alpha-card">X</a>
+                            <a href="/y" class="alpha-card">Y</a>
+                            <a href="/z" class="alpha-card">Z</a>
+                        </div>
+                    </div>
+
+                    <hr class="divider" style="margin-top: 24px;" />
+
+                    <!-- Donation Section -->
+                    <div class="donation-container" style="margin-top: 10px;">
+                        <div class="donation-card">
+                            <div class="donation-info">
+                                <span class="donation-icon">&#9889;</span>
+                                <div>
+                                    <p class="donation-title">Power Korvali Infrastructure</p>
+                                    <p class="donation-sub">Support edge servers, domain renewals, and keep tools free forever.</p>
+                                </div>
+                            </div>
+                            <div class="donation-buttons">
+                                <a href="https://sociabuzz.com/korvali/support" target="_blank" rel="noopener" class="donate-btn donate-idr">
+                                    &#127470;&#127465; IDR 
+                                </a>
+                                <a href="https://ko-fi.com/korvali" target="_blank" rel="noopener" class="donate-btn donate-kofi">
+                                    &#9749; USD 
+                                </a>
+                                <a href="https://nowpayments.io/donation/korvali" target="_blank" rel="noopener" class="donate-btn donate-crypto">
+                                    &#8383; Crypto
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="divider" style="margin-top: 20px;" />
+
+                    <div style="text-align: center;">
+                        <a href="https://korvali.net" class="line text-cyan url-highlight" style="font-size: 13px;">&#x2190; Powered by Korvali Infrastructure</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
