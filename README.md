@@ -1,6 +1,14 @@
 # ⚡ Korvali TLD List Generator
 
-> A minimal, zero-dependency Python script to scrape IANA Root Zone Database and generate clean, responsive static HTML pages for TLD & ccSLD lookup.
+> A minimal, zero-dependency Python script to scrape root zone databases and generate clean, responsive static HTML pages for TLD & ccSLD lookup.
+
+---
+
+## 🔗 Official Network
+
+- **Main Platform**: [korvali.net](https://korvali.net)
+- **Live Demo Engine**: [tld.korvali.net](https://tld.korvali.net)
+---
 
 ## 🎯 Features
 
@@ -11,8 +19,3 @@
 - **📱 Fully Responsive**: Outputs standalone HTML with Flexbox layout, white-space wrapping, and custom scroll overrides.
 
 ---
-
-## 🛠️ Usage
-
-### 1. Run the Script
-Execute the script directly using Python
