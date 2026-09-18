@@ -1,7 +1,7 @@
 import urllib.request
 from html.parser import HTMLParser
 
-# Database ccSLD Populer Dunia untuk Filter Tambahan
+# Predefined Global Popular ccSLD Database for Extended Suffix Filtering
 POPULAR_CCSLDS = [
     # Indonesia (.id)
     ".co.id", ".web.id", ".my.id", ".biz.id", ".org.id", ".net.id", ".ac.id", ".sch.id", ".go.id",
@@ -31,6 +31,8 @@ POPULAR_CCSLDS = [
 
 
 class RootTableParser(HTMLParser):
+    """Simple HTML table parser to extract domain extensions from root zone databases."""
+
     def __init__(self):
         super().__init__()
         self.in_tr = False
@@ -64,6 +66,7 @@ class RootTableParser(HTMLParser):
 
 
 def map_type_label(raw_type: str) -> str:
+    """Map raw root database types into standard readable TLD shorthand tags."""
     mapping = {
         "generic": "gTLD",
         "country-code": "ccTLD",
@@ -76,6 +79,7 @@ def map_type_label(raw_type: str) -> str:
 
 
 def fetch_tlds_with_types(suffix="e"):
+    """Fetch root domain database and filter extensions ending with a given suffix."""
     url = "https://www.iana.org/domains/root/db"
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     results = []
@@ -88,6 +92,7 @@ def fetch_tlds_with_types(suffix="e"):
         parser = RootTableParser()
         parser.feed(html_content)
 
+        # 1. Parse official TLDs from root database
         for row in parser.rows:
             if len(row) >= 2:
                 raw_domain = row[0].strip()
@@ -100,6 +105,7 @@ def fetch_tlds_with_types(suffix="e"):
                 )
                 clean_name = domain.lstrip(".")
 
+                # Filter by suffix and exclude Punycode (xn--)
                 if clean_name.endswith(clean_suffix) and not clean_name.startswith("xn--"):
                     results.append({
                         "domain": domain,
@@ -110,6 +116,7 @@ def fetch_tlds_with_types(suffix="e"):
     except Exception as e:
         print(f"Error fetching root data: {e}")
 
+    # 2. Append matching ccSLD entries from predefined database
     for ccsld in POPULAR_CCSLDS:
         clean_ccsld = ccsld.lower().strip().lstrip(".")
         if clean_ccsld.endswith(clean_suffix):
@@ -124,7 +131,8 @@ def fetch_tlds_with_types(suffix="e"):
 
 
 def export_to_html(data, target_char="e", filename=None):
-    # Nama file fisik di disk tetap .html agar bisa dibaca server
+    """Generate production-ready, SEO-optimized static HTML output."""
+    # Physical filename on disk defaults to .html for static web server rendering
     file_disk_name = f"{target_char}.html" if not filename else filename
 
     ccslds = [item for item in data if item["type"] == "ccSLD"]
@@ -133,19 +141,22 @@ def export_to_html(data, target_char="e", filename=None):
 
     cards_html = ""
 
+    # Render ccSLD cards (Neon Green Badge)
     for item in ccslds:
         cards_html += f'                        <div class="tld-card ccsld"><span class="domain-text">{item["domain"]}</span><span class="type-label">ccSLD</span></div>\n'
 
+    # Render ccTLD cards (Amber Badge)
     for item in cctlds:
         cards_html += f'                        <div class="tld-card cctld"><span class="domain-text">{item["domain"]}</span><span class="type-label">cc</span></div>\n'
 
+    # Render gTLD cards (Default Cyan Badge)
     for item in gtlds:
         cards_html += f'                        <div class="tld-card"><span class="domain-text">{item["domain"]}</span><span class="type-label">{item["type"]}</span></div>\n'
 
     page_title = f"TLDs Ending with '{target_char}' — Korvali TLD"
     page_desc = f"Browse all {len(data)} top-level domains (TLDs) and ccSLDs ending with letter '{target_char}'. Powered by Korvali Infrastructure."
     
-    # 🌟 CLEAN URL SEO: Tanpa ekstensi .html di atribut meta!
+    # 🌟 CLEAN URL SEO: Omit .html extension in canonical & meta properties
     page_url = f"https://tld.korvali.net/{target_char}"
 
     html_template = f"""<!DOCTYPE html>
